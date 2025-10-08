@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Process Kick-off Session</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            padding-bottom: 120px;
+        }
+
+        #presentation-container {
+            width: 1024px;
+            height: 768px;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            padding: 50px 70px 80px 70px;
+            background: #582C83;
+            color: white;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide-title {
+            font-size: 52px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #FFC107;
+            line-height: 1.2;
+        }
+
+        .slide-subtitle {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: white;
+            line-height: 1.3;
+        }
+
+        .slide-content {
+            font-size: 24px;
+            line-height: 1.8;
+        }
+
+        .slide-content ul {
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+
+        .slide-content li {
+            margin-bottom: 20px;
+        }
+
+        .slide-content strong {
+            color: #FFC107;
+        }
+
+        .white-box {
+            background: white;
+            color: #582C83;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .white-box h3 {
+            color: #582C83;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .emphasis-box {
+            background: #FFC107;
+            color: #582C83;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-weight: bold;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .step-number {
+            background: #FFC107;
+            color: #582C83;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .controls button {
+            background: #582C83;
+            color: #FFC107;
+            border: 2px solid #FFC107;
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .controls button:hover {
+            background: #FFC107;
+            color: #582C83;
+        }
+
+        .controls button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            color: #FFC107;
+            font-size: 18px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .column-header {
+            background: #FFC107;
+            color: #582C83;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .criteria-grid {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .criteria-item {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .criteria-label {
+            color: #FFC107;
+            font-weight: bold;
+            min-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="presentation-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <div style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <h1 style="font-size: 64px; color: #FFC107; margin-bottom: 30px;">Capstone Process<br>Kick-off Session</h1>
+                <p style="font-size: 32px; margin-bottom: 50px;">Hunter College Certificate in Business Studies</p>
+                <p style="font-size: 28px;">Tuesday, October 7th, 2025</p>
+            </div>
+            <div class="slide-number">1 / 13</div>
+        </div>
+
+<!-- Slide 2: What Is the Capstone? (overview, tighter spacing) -->
+<div class="slide">
+  <h1 class="slide-title" style="margin-bottom:20px;">BUS 497: Business Studies Capstone and Internship</h1>
+
+  <div class="slide-content" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:100%; margin-top:-20px;">
+    
+    <div class="emphasis-box" style="max-width:800px; margin-top:0;">
+      The Capstone = 
+      <span style="font-weight:700; color:#582C83;">Internship</span>
+      + 
+      <span style="font-weight:700; color:#582C83;">Weekly Online Class</span>
+    </div>
+
+    <p style="font-size:28px; max-width:850px; line-height:1.6; margin-top:30px;">
+      Gain <strong>real experience</strong> through your internship and 
+      <strong>reflect, connect, and grow</strong> in the weekly seminar.
+    </p>
+
+    <p style="font-size:26px; color:#FFC107; margin-top:38px;">
+      Two parts. One course. Real-world learning.
+    </p>
+  </div>
+
+  <div class="slide-number"></div>
+</div>
+
+        <!-- Slide 2: Deadline Cliff (visual opener) -->
+<div class="slide">
+  <div style="height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+    <div style="background:#fff; padding:15px; border-radius:12px; max-width:780px; width:90%; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+      <img src="/Users/peterreadman/Dropbox/@10,000%20feet%20and%20Runway/Hunter%20Advising/Business%20Certificate%20Advising/BusCert_SlideDecks/images/cliff.png" 
+           alt="Students walking toward a cliff edge" 
+           style="width:100%; max-height:480px; object-fit:contain; border-radius:8px;">
+    </div>
+    <h1 class="slide-title" style="margin-top:24px;">
+      Avoid the Cliff: Secure Your Internship <em>Before</em> Class!
+    </h1>
+  </div>
+  <div class="slide-number"></div>
+</div>
+
+        <!-- Slide 2: Why This Matters -->
+        <div class="slide">
+            <h1 class="slide-title">Why This Matters</h1>
+            <div class="slide-content">
+                <div class="emphasis-box">
+                    ⚠️ Especially important for Spring/Summer 2026 graduates
+                </div>
+                <ul>
+                    <li><strong>To enroll in Capstone (BUS 497):</strong> You need an approved internship BEFORE the course starts</li>
+                    <li><strong>To graduate with the Business Certificate:</strong> You must complete the Capstone</li>
+                    <li><strong>Timeline is tight:</strong> We're in October 2025. If you're graduating in 2026, you need to act NOW</li>
+                    <li><strong>For everyone else:</strong> Start planning early to avoid last-minute stress</li>
+                </ul>
+            </div>
+            <div class="slide-number">2 / 13</div>
+        </div>
+
+        <!-- Slide 3: The Reality Check -->
+        <div class="slide">
+            <h1 class="slide-title">The Reality Check</h1>
+            <div class="slide-content">
+                <h2 class="slide-subtitle">Finding internships is challenging right now</h2>
+                
+                <ul style="font-size: 26px; line-height: 1.9; margin-top: 40px;">
+                    <li>The job market is competitive - you're not imagining it</li>
+                    <li>Apply regularly and broadly - consistency beats cramming</li>
+                    <li>This requires strategy, creativity, and persistence</li>
+                    <li>Starting early gives you more options and less stress</li>
+                </ul>
+
+                <div class="emphasis-box" style="margin-top: 50px;">
+                    This session will help you think strategically about where to look and how to approach the search
+                </div>
+            </div>
+            <div class="slide-number">3 / 13</div>
+        </div>
+
+       <!-- Slide 4: What Actually Counts -->
+<div class="slide">
+    <h1 class="slide-title">What Actually Counts?</h1>
+    <div class="slide-content">
+        <div class="criteria-grid" style="font-size: 23px;">
+            <div class="criteria-item">
+                <span class="criteria-label" style="display: inline-block; width: 180px;">Hours:</span><span>15+ hours/week</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-label" style="display: inline-block; width: 180px;">Duration:</span><span>10+ weeks (Spring) / 8+ weeks (Summer)</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-label" style="display: inline-block; width: 180px;">Compensation:</span><span>Paid preferred, unpaid acceptable if it meets criteria</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-label" style="display: inline-block; width: 180px;">Supervisor:</span><span>Must have an employer point person (not immediate family)</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-label" style="display: inline-block; width: 180px;">Work Product:</span><span>Identifiable project you'll complete</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-label" style="display: inline-block; width: 180px;">Skills:</span><span>Specific skills you'll develop</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-label" style="display: inline-block; width: 180px;">Function:</span><span>Finance, Marketing, Strategy, Consulting, Tech, Operations, HR, Sales, etc.</span>
+            </div>
+        </div>
+        <p style="margin-top: 30px; font-size: 22px; font-style: italic;">Ideally links to your career goals.</p>
+    </div>
+    <div class="slide-number"></div>
+</div>
+
+        <!-- Slide 5: Think Creatively -->
+<div class="slide">
+    <h1 class="slide-title">Think Creatively</h1>
+    <div class="slide-content">
+        <h2 class="slide-subtitle">Yes, apply to your dream companies AND explore creative options:</h2>
+        <div class="white-box">
+            <ul style="font-size: 22px; line-height: 1.8; color: #333; margin-left: 30px;">
+                <li>A family member's business that needs a social media campaign or marketing strategy</li>
+                <li>A small business owner who needs help streamlining operations or processes</li>
+                <li>A nonprofit in your community that needs fundraising support or program development</li>
+                <li>A local restaurant that wants to improve their online presence</li>
+                <li>Someone self-employed who needs basic business infrastructure (invoicing, client tracking, etc.)</li>
+            </ul>
+        </div>
+        <p style="margin-top: 30px; font-size: 26px;"><strong>Who do you know?</strong> Family, friends, community members, former employers?<br>
+        <span style="font-size: 22px;">Having multiple options gives you a better chance of securing something in time.</span></p>
+    </div>
+    <div class="slide-number">5 / 13</div>
+</div>
+
+        <!-- Slide 6: Common Questions -->
+        <div class="slide">
+            <h1 class="slide-title">Common Questions</h1>
+            <div class="slide-content" style="font-size: 22px;">
+                <ul style="list-style: none; margin-left: 0;">
+                    <li style="margin-bottom: 25px;"><strong style="color: #FFC107;">❓ "I already have a job—does my Starbucks position count?"</strong><br>
+                    Maybe. It depends on your role and what projects you can do. Let's discuss it.</li>
+                    
+                    <li style="margin-bottom: 25px;"><strong style="color: #FFC107;">❓ "I'm doing research in a lab—does that count?"</strong><br>
+                    Usually No! But talk to us before deciding.</li>
+                    
+                    <li style="margin-bottom: 25px;"><strong style="color: #FFC107;">❓ "Can I work for a family business?"</strong><br>
+                    Yes! But you need a supervisor who is NOT an immediate family member.</li>
+                    
+                    <li style="margin-bottom: 25px;"><strong style="color: #FFC107;">❓ "Can I do a virtual/remote internship?"</strong><br>
+                    Absolutely.</li>
+                    
+                    <li style="margin-bottom: 25px;"><strong style="color: #FFC107;">❓ "Can I combine two shorter internships?"</strong><br>
+                    Usually No! But talk to us before deciding.</li>
+                </ul>
+            </div>
+            <div class="slide-number">6 / 13</div>
+        </div>
+
+        <!-- Slide 7: Where to Find Internships -->
+        <div class="slide">
+            <h1 class="slide-title">Where to Find Internships</h1>
+            <div class="slide-content" style="font-size: 22px;">
+                <ul>
+                    <li><strong>Your network</strong> — Tell EVERYONE you're looking. This is #1.</li>
+                    <li><strong>Hunter Career Services</strong> — Workshops, coaching, drop-in sessions</li>
+                    <li><strong>CUNY Spring Forward</strong> — Just opened! For students who've never had an internship</li>
+                    <li><strong>Online platforms</strong> — Handshake, LinkedIn, Indeed</li>
+                    <li><strong>Company websites</strong> — Apply directly</li>
+                    <li><strong>Faculty connections</strong> — Professors often know people in industry</li>
+                    <li><strong>Community organizations</strong> — Nonprofits, local businesses, religious communities</li>
+                    <li><strong>Each other</strong> — Connect with other students on this call!</li>
+                </ul>
+                <div class="emphasis-box" style="margin-top: 25px; font-size: 22px;">
+                    It's a numbers game: the more places you look, the more opportunities you'll find
+                </div>
+            </div>
+            <div class="slide-number">7 / 13</div>
+        </div>
+
+  <!-- Slide: Job Tracker Tool -->
+<div class="slide">
+    <h1 class="slide-title">Stay Organized: Job Tracker</h1>
+    <div class="slide-content">
+        <p style="font-size: 26px; margin-bottom: 30px;">We're providing you with a <strong>Job Tracker spreadsheet</strong> to help you manage your search:</p>
+        
+        <div class="white-box">
+            <h3>What it tracks:</h3>
+            <ul style="font-size: 22px; line-height: 1.7; color: #333; margin-left: 30px; margin-top: 15px;">
+                <li><strong>Job Applications</strong> - Every position you apply to, status updates, interview dates</li>
+                <li><strong>Contacts</strong> - Professional connections, networking contacts, follow-up reminders</li>
+                <li><strong>Follow-ups</strong> - Scheduled outreach to recruiters and hiring managers</li>
+                <li><strong>Resources</strong> - Useful links, job boards, career prep materials</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="slide-number"></div>
+</div>
+
+        <!-- Slide 8: Job Search Strategy -->
+        <div class="slide">
+            <h1 class="slide-title">Job Search Strategy</h1>
+            <div class="slide-content">
+                <ul>
+                    <li><strong>Apply broadly and often</strong> — Don't just send 5 applications and give up. Aim for 10+ per week.</li>
+                    <li><strong>Tailor your applications</strong> — Customize your resume and cover letter for each opportunity</li>
+                    <li><strong>Start with your network</strong> — Ask: "Is there anyone else I can speak to?" Create a chain</li>
+                    <li><strong>Be open!</strong> — Your dream role might come from an unexpected place</li>
+                    <li><strong>Have a Plan A AND backup plans</strong> — Especially if you're close to graduation</li>
+                    <li><strong>Remember the dead period</strong> — Between Thanksgiving and New Year's, hiring slows down AND you're busy with Finals. Apply NOW!</li>
+                </ul>
+            </div>
+            <div class="slide-number">8 / 13</div>
+        </div>
+
+        <!-- Slide 9: The Approval Process -->
+        <div class="slide">
+            <h1 class="slide-title">The Approval Process</h1>
+            <div class="slide-content">
+                <div style="font-size: 28px; margin-bottom: 30px;">
+                    <p style="margin-bottom: 15px;"><span class="step-number">1</span> Find and secure your internship opportunity</p>
+                    <p style="margin-bottom: 15px;"><span class="step-number">2</span> Submit the Capstone Approval Request Form</p>
+                    <p style="margin-bottom: 15px;"><span class="step-number">3</span> Get approval confirmation (usually within 48 hours)</p>
+                    <p style="margin-bottom: 15px;"><span class="step-number">4</span> Register for BUS 497 Capstone</p>
+                </div>
+                <div class="emphasis-box">
+                    We cannot guarantee a spot in the class if you wait until the last minute!
+                </div>
+            </div>
+            <div class="slide-number">9 / 13</div>
+        </div>
+
+        <!-- Slide 10: Key Deadlines -->
+        <div class="slide">
+            <h1 class="slide-title">Key Deadlines & Timeline</h1>
+            <div class="slide-content">
+                <div class="white-box">
+                    <h3>Spring 2026 Capstone:</h3>
+                    <p style="font-size: 22px; margin-top: 10px;">Internship should be approved 2 weeks BEFORE Spring class begins</p>
+                </div>
+                <div class="white-box">
+                    <h3>Summer 2026 Capstone:</h3>
+                    <p style="font-size: 22px; margin-top: 10px;">Internship should be approved 2 weeks BEFORE Summer class begins</p>
+                </div>
+                <div class="emphasis-box">
+                    Start searching NOW if you haven't already started!<br>
+                    (Remember: Thanksgiving through New Year's is a "dead period" for hiring AND you're busy with finals)
+                </div>
+                <p style="margin-top: 25px; font-size: 24px;"><strong>Approval typically takes:</strong> 48 hours after you submit all required info</p>
+            </div>
+            <div class="slide-number">10 / 13</div>
+        </div>
+
+        <!-- Slide 11: Resources & Support -->
+        <div class="slide">
+            <h1 class="slide-title">Resources & Support</h1>
+            <div class="slide-content" style="font-size: 22px;">
+                <div class="white-box">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3>Business Certificate Team</h3>
+                            <p><strong>Email:</strong> buscert@hunter.cuny.edu</p>
+                            <p><strong>Schedule appointment:</strong> Navigate (Peter Readman)</p>
+                            <p><strong>Drop-in hours:</strong> Mondays 2-4pm, HW 1531</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="white-box">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 30px;">
+                        <div style="flex: 1;">
+                            <h3>Hunter Career Services</h3>
+                            <p>Individual coaching sessions, workshops, drop-in support</p>
+                        </div>
+                        <div style="background: white; padding: 10px; border: 2px solid #582C83; border-radius: 8px; flex-shrink: 0;">
+                            <img src="images/qr_career-center.png" alt="Career Center QR Code" style="width: 120px; height: 120px; display: block;">
+                            <p style="font-size: 14px; text-align: center; margin-top: 5px; color: #582C83;">Events Calendar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="white-box">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 30px;">
+                        <div style="flex: 1;">
+                            <h3>Capstone Approval Request Form</h3>
+                            <p>Submit this form once you have secured an opportunity</p>
+                        </div>
+                        <div style="background: white; padding: 10px; border: 2px solid #582C83; border-radius: 8px; flex-shrink: 0;">
+                            <img src="images/qr_capstone_form.png" alt="Capstone Form QR Code" style="width: 120px; height: 120px; display: block;">
+                            <p style="font-size: 14px; text-align: center; margin-top: 5px; color: #582C83;">Scan to access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number"></div>
+        </div>
+
+        <!-- Slide 12: Action Items -->
+        <div class="slide">
+            <h1 class="slide-title">Action Items - This Week!</h1>
+            <div class="slide-content">
+                <ul style="font-size: 26px;">
+                    <li><strong>Start searching for internships TODAY if you haven't already</strong></li>
+                    <li><strong>Attend Career Services workshops</strong> — Check the calendar and sign up</li>
+                    <li><strong>Review the internship criteria carefully</strong> — Make sure you understand what qualifies</li>
+                    <li><strong>Tell everyone you know you're looking</strong> — Family, friends, community members, professors</li>
+                    <li><strong>Mark key deadlines in your calendar</strong></li>
+                    <li><strong>Make an Appointment / Reach out to buscert team with questions</strong> — Don't wait!</li>
+                    <li><strong>Connect with peers from this call</strong> — You're not alone in this</li>
+                </ul>
+            </div>
+            <div class="slide-number">12 / 13</div>
+        </div>
+
+        <!-- Slide 13: Q&A / Final Reminders -->
+        <div class="slide">
+            <h1 class="slide-title">Questions & Final Reminders</h1>
+            <div class="slide-content">
+                <div class="emphasis-box" style="font-size: 32px; margin-bottom: 40px;">
+                    Time for Q&A!
+                </div>
+                <div style="font-size: 26px; line-height: 2;">
+                    <p><strong>Remember:</strong></p>
+                    <ul style="margin-left: 40px; margin-top: 20px;">
+                        <li>Don't wait until the last minute</li>
+                        <li>Internship must be approved BEFORE enrolling in Capstone</li>
+                        <li>Tell us as soon as you have something lined up</li>
+                        <li>We're here to help—reach out anytime</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 50px; text-align: center; font-size: 28px;">
+                    <strong style="color: #FFC107;">General: buscert@hunter.cuny.edu</strong><br>
+                    <strong style="color: #FFC107;">Pete: pr1760@hunter.cuny.edu</strong>
+                </div>
+            </div>
+            <div class="slide-number">13 / 13</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+  // --- Helpers ---
+  function qs(sel){ return document.querySelector(sel); }
+  function qsa(sel){ return document.querySelectorAll(sel); }
+
+  // --- State ---
+  let currentSlide = 0;
+  let slides;
+
+  // --- Core ---
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+
+    qs('#prevBtn').disabled = currentSlide === 0;
+    qs('#nextBtn').disabled = currentSlide === slides.length - 1;
+  }
+
+  // expose globally for inline onclick handlers
+  window.changeSlide = function(direction) {
+    showSlide(currentSlide + direction);
+  };
+
+  // --- Init after DOM is ready ---
+  document.addEventListener('DOMContentLoaded', () => {
+    slides = qsa('.slide');
+
+    // Auto-number slides
+    slides.forEach((s, i) => {
+      let sn = s.querySelector('.slide-number') || Object.assign(document.createElement('div'), { className: 'slide-number' });
+      if (!s.querySelector('.slide-number')) s.appendChild(sn);
+      sn.textContent = `${i + 1} / ${slides.length}`;
+    });
+
+    // Ensure exactly the first slide is active at start
+    slides.forEach((s, i) => s.classList.toggle('active', i === 0));
+
+    // Set initial button states
+    qs('#prevBtn').disabled = true;
+    qs('#nextBtn').disabled = slides.length <= 1;
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft'  && currentSlide > 0)            window.changeSlide(-1);
+      if (e.key === 'ArrowRight' && currentSlide < slides.length-1) window.changeSlide(1);
+    });
+  });
+</script>
+</body>
+</html>
